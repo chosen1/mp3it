@@ -1,12 +1,45 @@
 #!/usr/bin/python
 #
-# Copyright [2011] Sundar Srinivasan
+# Authors:
+# ==============================================================================
+# Author: Sundar Srinivasan (krishna.sun@gmail.com) Twitter: @krishnasun
+# Author: Chosen1 (chosen1x@gmail.com) Twitter: @chosen1x
 #
+# Copyright [2011] Sundar Srinivasan
+# Fork Copyright [2012] Chosen1
+#
+# Purpose:
+# ==============================================================================
+# Reasoning: This was almost identical to code I was authoring so I forked
+# it to save time.
+#
+# Purpose of Fork: I often like to look up lectures or information on youtube
+# when I am unable to attend a conference in person or am reasearching something
+# new. In the interest of making the content as portable as possible for my own
+# use this fork will download the video infromation and convert it into the
+# ultraportable mp3 format for use in audo playback devices.
+#
+# Note: -- I am _NOT_ an attorney. --
+# I beleive that making a copy in mp3 format is covered under "Fair Use"
+# as you could access the information at any time online and in this case you
+# are making a copy for personal use, which is no different than recording
+# music off the radio onto audio cassette which had been common place for
+# many years.
+#
+# Edits:
+# ==============================================================================
+# 08/13/2012 - Edited file to reflect the fork and add documention of purpose.
+#
+# 08/14/2012 - Download function returning error. Workingto fix this before
+# adding new mp3 functions.
+#
+# License Info
+# ==============================================================================
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
 # You may obtain a copy of the License at
 #
-#      http://www.apache.org/licenses/LICENSE-2.0
+# http://www.apache.org/licenses/LICENSE-2.0
 #
 # Unless required by applicable law or agreed to in writing, software
 # distributed under the License is distributed on an "AS IS" BASIS,
@@ -14,9 +47,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-# Author: Sundar Srinivasan (krishna.sun@gmail.com) Twitter: @krishnasun
 
-__author__ = ('Sundar Srinivasan')
+
+__author__ = ('Chosen1')
 
 import re
 import sys
@@ -74,7 +107,7 @@ if __name__ == '__main__':
         exit(1)
     urlname = sys.argv[1].split('&', 1)[0]
     print('Downloading: ' + urlname)
-    try: 
+    try:
         resp = urllib2.urlopen(urlname)
     except urllib2.HTTPError:
         print('Bad URL: 404')
@@ -96,7 +129,3 @@ if __name__ == '__main__':
     f.flush()
     f.close()
     exit(0)
-    
-    
-    
-    
