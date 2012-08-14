@@ -1,10 +1,13 @@
-Python project to download YouTube video from command line
+Python project to download YouTube video from command line and 
+generate an mp3 file for personal use in audio playback devices.
 
-Author: Sundar Srinivasan, Twitter: @krishnasun
+mp3it Author: Chosen1, Twitter: @chosen1x
+YouTap Author: Sundar Srinivasan, Twitter: @krishnasun
 
-Usage: python youtap.py "<link-to-youtube-video-page>"
+Usage: python mp3it.py "<link-to-youtube-video-page>"
 
 License under: Apache License, Version: 2.0
 	(http://www.apache.org/licenses/LICENSE-2.0.html)
 
-The reason for giving the link in double-quotes is that sometimes the link contain '&'(ampersand), which the UNIX interprets as "run the program in background"
+The reason for giving the link in double-quotes is that sometimes the link 
+contains '&'(ampersand), which the UNIX interprets as "run the program in background"
